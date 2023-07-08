@@ -11,10 +11,8 @@ def study_schedule(permanence_period, target_time):
     for i in permanence_period:
         if not_int(i):
             return None
+
         if i[0] <= target_time <= i[1]:
             frequency += 1
 
     return frequency
-
-
-study_schedule([(2, 2), (1, 2), (2, 3), (1, 5), (4, 5), (4, 5), (6, 7)], 5)
